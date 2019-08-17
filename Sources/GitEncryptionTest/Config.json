@@ -1,9 +1,0 @@
-{
-    "config": {
-        "emailAccount": "an account",
-        "emailName": "a name",
-        "password": "a password of some description",
-        "hostName": "some host name"
-    }
-}
-
