@@ -11,6 +11,6 @@ before_install:
 - swift package generate-xcodeproj
 deploy:
   provider: script
-  script: bash .docker_push
+  script: bash .docker_push $AES_PASS
   on:
     branch: master

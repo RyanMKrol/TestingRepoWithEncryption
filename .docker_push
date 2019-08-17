@@ -1,5 +1,12 @@
 #!/bin/bash
 
+AES_PASS=$1
+
+openssl enc -aes-256-cbc -d -in Sources/GitEncryptionTest/awsKeypair.pem.enc -out Sources/GitEncryptionTest/awsKeypair.pem -k $AES_PASS
+openssl enc -aes-256-cbc -d -in Sources/GitEncryptionTest/Config.json.enc -out Sources/GitEncryptionTest/Config.json -k $AES_PASS
+openssl enc -aes-256-cbc -d -in Sources/GitEncryptionTest/OtherConfig.json.enc -out Sources/GitEncryptionTest/OtherConfig.json -k $AES_PASS
+
+
 echo "where are we"
 pwd
 echo "1"
