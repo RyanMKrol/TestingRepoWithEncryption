@@ -24,9 +24,10 @@ final class GitEncryptionTestTests: XCTestCase {
         process.waitUntilExit()
 
         let data = pipe.fileHandleForReading.readDataToEndOfFile()
-        let output = String(data: data, encoding: .utf8)
-
-        XCTAssertEqual(output, "Success\n")
+        let output = String(data: data, encoding: .utf8) ?? ""
+        print("output is")
+        print(output)
+        XCTAssert(output.contains("Success"))
     }
 
     /// Returns path to the built products directory.
