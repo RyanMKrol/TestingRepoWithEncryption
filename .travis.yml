@@ -1,0 +1,9 @@
+language: swift
+os: osx
+osx_image: xcode10.3
+before_script:
+- swift package generate-xcodeproj
+xcode_project: GitEncryptionTest.xcodeproj
+xcode_scheme: GitEncryptionTest-Package
+xcode_destination: platform=macOS
+
