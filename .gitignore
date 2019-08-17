@@ -4,3 +4,4 @@
 /*.xcodeproj
 .gitsecret/keys/random_seed
 !*.secret
+Sources/GitEncryptionTest/Config.json
