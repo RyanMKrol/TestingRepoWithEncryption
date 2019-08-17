@@ -6,7 +6,6 @@ xcode_scheme: GitEncryptionTest-Package
 xcode_destination: platform=macOS
 before_install:
 - openssl aes-256-cbc -K $encrypted_74a221dce6ae_key -iv $encrypted_74a221dce6ae_iv
-  -in Sources/GitEncryptionTestOther/Config.json.enc -out Sources/GitEncryptionTest/OtherConfig.json -d
-- openssl aes-256-cbc -K $encrypted_74a221dce6ae_key -iv $encrypted_74a221dce6ae_iv
-  -in Sources/GitEncryptionTest/Config.json.enc -out Sources/GitEncryptionTest/Config.json -d
+  -in Sources/GitEncryptionTest/configs.tar.enc -out Sources/GitEncryptionTest/configs.tar -d
+- tar xvf Sources/GitEncryptionTest/configs.tar
 - swift package generate-xcodeproj
