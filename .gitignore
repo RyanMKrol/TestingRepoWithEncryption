@@ -2,5 +2,3 @@
 /.build
 /Packages
 /*.xcodeproj
-.gitsecret/keys/random_seed
-!*.secret
