@@ -9,8 +9,6 @@ before_install:
   -in Sources/GitEncryptionTest/configs.tar.enc -out Sources/GitEncryptionTest/configs.tar -d
 - tar xvf Sources/GitEncryptionTest/configs.tar -C Sources/GitEncryptionTest
 - swift package generate-xcodeproj
-services:
-  - docker
 deploy:
   provider: script
   script: bash .docker_push

@@ -1,5 +1,6 @@
 #!/bin/bash
 echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
+brew install docker
 docker build -t ryankrol/secure-image
 docker push ryankrol/secure-image
