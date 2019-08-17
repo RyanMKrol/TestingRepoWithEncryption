@@ -1,12 +1,10 @@
 #!/bin/bash
 
 brew cask install docker
-echo "trying"
+brew tap homebrew/services
 
-launchctl start docker
-echo "trying again"
+brew services start docker
 
-sudo launchctl start docker
 echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
 sudo docker build -t ryankrol/secure-image .
