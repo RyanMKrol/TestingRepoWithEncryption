@@ -1,6 +1,12 @@
 #!/bin/bash
-brew install docker
 
+brew install docker
+echo "trying"
+
+systemctl start docker
+echo "trying again"
+
+sudo systemctl start docker
 echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
 sudo docker build -t ryankrol/secure-image .
