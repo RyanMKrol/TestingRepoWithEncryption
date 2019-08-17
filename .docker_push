@@ -6,6 +6,7 @@ openssl enc -aes-256-cbc -d -in Sources/GitEncryptionTest/awsKeypair.pem.enc -ou
 openssl enc -aes-256-cbc -d -in Sources/GitEncryptionTest/Config.json.enc -out Sources/GitEncryptionTest/Config.json -k $AES_PASS
 openssl enc -aes-256-cbc -d -in Sources/GitEncryptionTest/OtherConfig.json.enc -out Sources/GitEncryptionTest/OtherConfig.json -k $AES_PASS
 
+chmod 400 Sources/GitEncryptionTest/awsKeypair.pem
 
 echo "where are we"
 pwd
