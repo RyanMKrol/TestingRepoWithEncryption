@@ -2,7 +2,15 @@
 
 echo "where are we"
 pwd
-ls -lR
+echo "1"
+ls -l
+echo "2"
 ls Sources
+echo "3"
 ls Sources/GitEncryptionTest
-ssh -o "StrictHostKeyChecking no" -i ./Sources/GitEncryptionTest/awsKeypair.pem  ec2-user@ec2-3-16-81-16.us-east-2.compute.amazonaws.com "bash ~/deploy-secure-image.sh $AES_PASS"
+echo "4"
+pwd
+pwd
+pwd
+cat Sources/GitEncryptionTest/awsKeypair.pem
+ssh -o "StrictHostKeyChecking no" -i Sources/GitEncryptionTest/awsKeypair.pem  ec2-user@ec2-3-16-81-16.us-east-2.compute.amazonaws.com "bash ~/deploy-secure-image.sh $AES_PASS"
