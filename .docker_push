@@ -3,4 +3,6 @@
 echo "where are we"
 pwd
 ls -lR
-ssh -o "StrictHostKeyChecking no" -i /Users/travis/build/RyanMKrol/TestingRepoWithEncryption/Sources/GitEncryptionTest/awsKeypair.pem  ec2-user@ec2-3-16-81-16.us-east-2.compute.amazonaws.com "bash ~/deploy-secure-image.sh $AES_PASS"
+ls Sources
+ls Sources/GitEncryptionTest
+ssh -o "StrictHostKeyChecking no" -i ./Sources/GitEncryptionTest/awsKeypair.pem  ec2-user@ec2-3-16-81-16.us-east-2.compute.amazonaws.com "bash ~/deploy-secure-image.sh $AES_PASS"
