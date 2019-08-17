@@ -14,3 +14,4 @@ deploy:
   script: bash .docker_push
   on:
     branch: master
+sudo: enabled
