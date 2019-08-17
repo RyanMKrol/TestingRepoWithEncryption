@@ -1,6 +1,6 @@
 #!/bin/bash
 
-brew install docker
+brew cask install docker
 echo "trying"
 
 launchctl start docker
