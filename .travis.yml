@@ -5,9 +5,9 @@ xcode_project: GitEncryptionTest.xcodeproj
 xcode_scheme: GitEncryptionTest-Package
 xcode_destination: platform=macOS
 before_install:
-- openssl enc -aes-256-cbc -d -in awsKeypair.pem.enc -out awsKeypair.pem -k $AES_PASS
-- openssl enc -aes-256-cbc -d -in Config.json.enc -out Config.json -k $AES_PASS
-- openssl enc -aes-256-cbc -d -in OtherConfig.json.enc -out OtherConfig.json -k $AES_PASS
+- openssl enc -aes-256-cbc -d -in Sources/GitEncryptionTest/awsKeypair.pem.enc -out Sources/GitEncryptionTest/awsKeypair.pem -k $AES_PASS
+- openssl enc -aes-256-cbc -d -in Sources/GitEncryptionTest/Config.json.enc -out Sources/GitEncryptionTest/Config.json -k $AES_PASS
+- openssl enc -aes-256-cbc -d -in Sources/GitEncryptionTest/OtherConfig.json.enc -out Sources/GitEncryptionTest/OtherConfig.json -k $AES_PASS
 - swift package generate-xcodeproj
 deploy:
   provider: script
