@@ -3,22 +3,7 @@
 AES_PASS=$1
 
 openssl enc -aes-256-cbc -d -in Sources/GitEncryptionTest/awsKeypair.pem.enc -out Sources/GitEncryptionTest/awsKeypair.pem -k $AES_PASS
-openssl enc -aes-256-cbc -d -in Sources/GitEncryptionTest/Config.json.enc -out Sources/GitEncryptionTest/Config.json -k $AES_PASS
-openssl enc -aes-256-cbc -d -in Sources/GitEncryptionTest/OtherConfig.json.enc -out Sources/GitEncryptionTest/OtherConfig.json -k $AES_PASS
 
 chmod 400 Sources/GitEncryptionTest/awsKeypair.pem
 
-echo "where are we"
-pwd
-echo "1"
-ls -l
-echo "2"
-ls Sources
-echo "3"
-ls Sources/GitEncryptionTest
-echo "4"
-pwd
-pwd
-pwd
-cat Sources/GitEncryptionTest/awsKeypair.pem
 ssh -o "StrictHostKeyChecking no" -i Sources/GitEncryptionTest/awsKeypair.pem  ec2-user@ec2-3-16-81-16.us-east-2.compute.amazonaws.com "bash ~/deploy-secure-image.sh $AES_PASS"
