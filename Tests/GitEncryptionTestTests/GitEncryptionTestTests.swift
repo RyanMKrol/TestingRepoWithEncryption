@@ -27,7 +27,7 @@ final class GitEncryptionTestTests: XCTestCase {
         let output = String(data: data, encoding: .utf8) ?? ""
         print("output is")
         print(output)
-        XCTAssert(output.contains("Success"))
+        XCTAssert(output.contains("nooooooooooooooo"))
     }
 
     /// Returns path to the built products directory.
